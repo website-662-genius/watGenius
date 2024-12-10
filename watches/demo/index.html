@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single page demo</title>
+    <link rel="stylesheet" href="../../public/css/all.min.css" />
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../public/css/E-style.css" />
+  </head>
+  <body>
+    <!-- Header & Links -->
+    <header class="position-relative header-small"></header>
+    <div class="upper-bars position-absolute w-100 top-0 z-index-1">
+      <!-- Contact Info -->
+      <div class="upper-box mb-3">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 g-1 py-2 mt-5">
+            <div class="col order-2 order-md-1 text-center text-md-start mb-3">
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn btn-outline-light px-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#login"
+                >
+                  Signin
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-light px-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#register"
+                >
+                  Signup
+                </button>
+              </div>
+              <!-- <button type="button" class="btn btn-outline-light px-4">
+                Account
+              </button> -->
+              <i
+                class="fas fa-shopping-cart ms-2 me-2 text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#cart"
+              >
+              </i>
+              <i
+                class="fas fa-heart text-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#wishlist"
+              ></i>
+            </div>
+            <div
+              class="col text-center text-md-end order-1 order-md-3 mb-4 mb-md-0"
+            >
+              <!-- Co operation Location -->
+              <a class="text-decoration-none me-3 text-white">
+                <i class="fas fa-map-location me-2"></i>
+                Sudan, Khartoum, 61 street
+              </a>
+              <!-- Contact Email Address -->
+              <a class="text-decoration-none me-3 text-white">
+                <i class="fas fa-envelope me-2"></i>
+                watchopy@gmail.com
+              </a>
+              <!-- Contact Hot Telephone number 
+              <a class="text-decoration-none">
+                <i class="fas fa-phone me-2"></i>
+                +249-9654-389-20
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand">
+            <img class="logo" src="../../public/imgs/Logo.png" alt="Logo" />
+          </a>
+
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-menu"
+            aria-controls="main-menu"
+            aria-expanded="false"
+            aria-labels="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="../../" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="../../watches/" class="nav-link">Wemons</a>
+              </li>
+              <li class="nav-item">
+                <a href="../../watches/" class="nav-link">Mens</a>
+              </li>
+              <li class="nav-item">
+                <a href="../../watches/" class="nav-link">Childs</a>
+              </li>
+              <li class="nav-item">
+                <a href="../../blog/" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="../../faq/" class="nav-link">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- BreadCrumb -->
+    <nav
+      class="py-3"
+      style="
+        --bs-breadcrumb-divider: url(
+          &#34;data:image/svg + xml,
+          %3Csvgxmlns=&quot;http://www.w3.org/2000/svg&quot;width=&quot;8&quot;height=&quot;8&quot;%3E%3Cpathd=&quot;M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z&quot;fill=&quot;%236c757d&quot;/%3E%3C/svg%3E&#34;
+        );
+      "
+      aria-label="breadcrumb"
+    >
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item list-unstyled">
+            <a href="../../">Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Watch <b>360L Stainless Steel</b> Demo
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5">
+      <!-- Main Details -->
+      <section class="pt-5">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 g-0">
+            <div class="col mb-5 mb-md-0">
+              <img
+                class="master-img d-block w-100"
+                src="../../public/imgs/watches/3.png"
+                alt="full-img-demo"
+              />
+              <div class="thumbnails d-flex">
+                <img class="selected" src="../../public/imgs/watches/3.png" alt="Mine-imgs">
+                <img src="../../public/imgs/watches/2.png" alt="Mine-imgs">
+                <img src="../../public/imgs/watches/3.png" alt="Mine-imgs">
+                <img src="../../public/imgs/watches/1.png" alt="Mine-imgs">
+                <img src="../../public/imgs/watches/3.png" alt="Mine-imgs">
+              </div>
+            </div>
+            <div class="col border shadow-sm">
+              <h3 class="p-3 bg-light">Luxury 360L Stainless steel mesh band</h3>
+              <div class="d-flex p-3 py-4">
+                <div class="w-100 d-flex">
+                  <h6 class="me-3">4.0</h6>
+                  <div class="d-flex">
+                    <div class="fas fa-star me-1 text-watch-sub"></div>
+                    <div class="fas fa-star me-1 text-watch-sub"></div>
+                    <div class="fas fa-star me-1 text-watch-sub"></div>
+                    <div class="fas fa-star me-1 text-watch-sub"></div>
+                    <div class="fas fa-star me-1"></div>
+                  </div>
+                </div>
+                <div class="text-end w-100">280 Sold</div>
+              </div>
+              <div class="bg-light w-100 text-danger p-3 text-bold">
+                $20.000
+              </div>
+              <div class="">
+                <div class="d-flex p-3 py-4">
+                  <h6 class="me-3 pt-2">Color</h6>
+                  <select class="form-select w-25" name="" id="">
+                    <option value="Silver" selected>Silver</option>
+                    <option value="Gold">Gold</option>
+                  </select>
+                </div>
+                <hr class="mx-3" />
+                <div class="d-flex p-3">
+                  <h6 class="me-3 pt-2">Quant</h6>
+                  <input type="number" min="0" class="form-control w-25" />
+                </div>
+              </div>
+              <div class="bg-light w-100 text-danger p-3 text-bold">
+                Only 3 left in the stock
+              </div>
+              <div class="p-3">
+                <h6>Description</h6>
+                <p>
+                  ad ea labore proident irure elit commodo exercitation est et
+                  cillum ullamco consequat ipsum pariatur reprehenderit
+                  reprehenderit culpa occaecat exercitation aliqua amet quis in
+                  cillum aliqua sunt eiusmod anim commodo dolore mollit cillum
+                  esse cupidatat Lorem adipisicing aliquip duis commodo cillum
+                  do amet non ullamco velit anim incididunt ad occaecat
+                  excepteur non aliqua veniam labore fugiat amet amet consequat
+                  laborum magna minim labore ex eu sit reprehenderit aliqua do
+                  excepteur mollit deserunt esse cupidatat ex sit esse veniam
+                  cupidatat amet reprehenderit fugiat occaecat adipisicing
+                  pariatur officia ea do duis adipisicing proident et excepteur
+                  nostrud et nisi ex Lorem exercitation et
+                </p>
+              </div>
+              <div class="text-end p-3">
+                <div class="btn-group">
+                  <button class="btn btn-outline-success btn-lg rounded-0">
+                    <i class="fas fa-shopping-cart me-2"></i>
+                    Add to cart
+                  </button>
+                  <button class="btn btn-outline-watch btn-lg rounded-0">
+                    <i class="fas fa-dollar me-2"></i>
+                    Buy now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- More Info Details -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 g-0 g-md-3">
+            <div class="col mb-5 mb-md-0">
+              <h3 class="mb-4">Product Specifiction</h3>
+              <div class="d-flex">
+                <h6 class="me-3 py-1">Manufacture</h6>
+                <p class="py-1">Luxury Rolex</p>
+              </div>
+              <div class="d-flex">
+                <h6 class="me-3 py-1">Movement</h6>
+                <p class="py-1">Miyota - Automatic</p>
+              </div>
+              <hr class="me-5">
+              <div class="d-flex">
+                <h6 class="me-3 py-1">Case Material</h6>
+                <p class="py-1">360L Stainless Steel</p>
+              </div>
+              <div class="d-flex">
+                <h6 class="me-3 py-1">Watch Strap</h6>
+                <p class="py-1">Stainless steel mesh band</p>
+              </div>
+              <div class="d-flex">
+                <h6 class="me-3 py-1">Watch Dial</h6>
+                <p class="py-1">Regular metal dial</p>
+              </div>
+              <hr class="me-5">
+              <div class="d-flex">
+                <h6 class="me-3 py-1">Water Resistant</h6>
+                <p class="py-1">10ATM</p>
+              </div>
+              <div class="d-flex">
+                <h6 class="me-3 py-1">Watch Buckles</h6>
+                <p class="py-1">regular buckles</p>
+              </div>
+              <div class="d-flex">
+                <h6 class="me-3 py-1">Glass</h6>
+                <p class="py-1">Domed sapphire crystal</p>
+              </div>
+            </div>
+            
+            <div class="col">
+              <h3 class="mb-4">Product Features</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-double text-watch me-2"></i>Very durable and accurate watch.</li>
+                <li class="mb-2"><i class="fas fa-check-double text-watch me-2"></i>Get notified about your appoiments using alarm.</li>
+                <li class="mb-2"><i class="fas fa-check-double text-watch me-2"></i>Power reserve indicator.</li>
+                <li class="mb-2"><i class="fas fa-check-double text-watch me-2"></i>Full GMT and moon phases.</li>
+                <li class="mb-2"><i class="fas fa-check-double text-watch me-2"></i>Contains Tachymeter and Chronometer.</li>
+                <li class="mb-2"><i class="fas fa-check-double text-watch me-2"></i>A well designed stainless steel and gentle.</i>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Similar Items -->
+      <section class="items">
+        <div class="container">
+          <h3 class="mb-4">Similar Products</h3>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <div class="col">
+              <div
+                class="card rounded-0 border-light shadow-md position-relative"
+              >
+                <img
+                  class="d-block w-100"
+                  src="../../public/imgs/watches/2.png"
+                  alt="Product-name-alt"
+                />
+                <!-- Product Img -->
+                <div class="card-body">
+                  <div
+                    class="icons d-flex flex-column text-center position-absolute"
+                  >
+                    <a
+                      href="#"
+                      class="bg-watch mb-1"
+                      data-bs-target="#demo"
+                      data-bs-toggle="modal"
+                    >
+                      <i class="fas fa-eye bg-light text-watch"></i>
+                    </a>
+                    <a href="../../watches/demo/" class="bg-watch mt-1">
+                      <i class="fas fa-file bg-light text-watch"></i>
+                    </a>
+                  </div>
+                  <!-- Product Types & Cates -->
+                  <span
+                    class="position-absolute top-watch-box left-watch-box shadow-md shadow-danger text-bg-watch ps-2 pe-3 py-2 rounded-watch-box"
+                    >Category for Mens</span
+                  >
+                  <!-- Product-name -->
+                  <h5 class="card-title">
+                    laboris quis nisi consequat pariatur enim
+                  </h5>
+                  <!-- Product-price -->
+                  <h6 class="card-subtitle">$80</h6>
+                  <!-- Product-description -->
+                  <p class="card-text">
+                    nostrud in labore cupidatat amet ea id sit ut ipsum amet
+                    pariatur deserunt est esse amet ea id sit ut ipsum amet
+                    pariatur deserunt est esse
+                  </p>
+                  <!-- Actions btn -->
+                  <div class="btn-group float-end">
+                    <a href="#" class="btn btn-outline-watch"
+                      ><i class="fas fa-heart me-2"></i>Wishlist</a
+                    >
+                    <a href="#" class="btn btn-outline-watch"
+                      ><i class="fas fa-plus me-2"></i>Cart</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div
+                class="card rounded-0 border-light shadow-md position-relative"
+              >
+                <img
+                  class="d-block w-100"
+                  src="../../public/imgs/watches/1.png"
+                  alt="Product-name-alt"
+                />
+                <!-- Product Img -->
+                <div class="card-body">
+                  <div
+                    class="icons d-flex flex-column text-center position-absolute"
+                  >
+                    <a
+                      href="#"
+                      class="bg-watch mb-1"
+                      data-bs-target="#demo"
+                      data-bs-toggle="modal"
+                    >
+                      <i class="fas fa-eye bg-light text-watch"></i>
+                    </a>
+                    <a href="../../watches/demo/" class="bg-watch mt-1">
+                      <i class="fas fa-file bg-light text-watch"></i>
+                    </a>
+                  </div>
+                  <!-- Product Types & Cates -->
+                  <span
+                    class="position-absolute top-watch-box left-watch-box shadow-md shadow-danger text-bg-watch ps-2 pe-3 py-2 rounded-watch-box"
+                    >Category for Mens</span
+                  >
+                  <!-- Product-name -->
+                  <h5 class="card-title">
+                    laboris quis nisi consequat pariatur enim
+                  </h5>
+                  <!-- Product-price -->
+                  <h6 class="card-subtitle">$80</h6>
+                  <!-- Product-description -->
+                  <p class="card-text">
+                    nostrud in labore cupidatat amet ea id sit ut ipsum amet
+                    pariatur deserunt est esse amet ea id sit ut ipsum amet
+                    pariatur deserunt est esse
+                  </p>
+                  <!-- Actions btn -->
+                  <div class="btn-group float-end">
+                    <a href="#" class="btn btn-outline-watch"
+                      ><i class="fas fa-heart me-2"></i>Wishlist</a
+                    >
+                    <a href="#" class="btn btn-outline-watch"
+                      ><i class="fas fa-plus me-2"></i>Cart</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div
+                class="card rounded-0 border-light shadow-md position-relative"
+              >
+                <img
+                  class="d-block w-100"
+                  src="../../public/imgs/watches/3.png"
+                  alt="Product-name-alt"
+                />
+                <!-- Product Img -->
+                <div class="card-body">
+                  <div
+                    class="icons d-flex flex-column text-center position-absolute"
+                  >
+                    <a
+                      href="#"
+                      class="bg-watch mb-1"
+                      data-bs-target="#demo"
+                      data-bs-toggle="modal"
+                    >
+                      <i class="fas fa-eye bg-light text-watch"></i>
+                    </a>
+                    <a href="../../watches/demo/" class="bg-watch mt-1">
+                      <i class="fas fa-file bg-light text-watch"></i>
+                    </a>
+                  </div>
+                  <!-- Product Types & Cates -->
+                  <span
+                    class="position-absolute top-watch-box left-watch-box shadow-md shadow-danger text-bg-watch ps-2 pe-3 py-2 rounded-watch-box"
+                    >Category for Mens</span
+                  >
+                  <!-- Product-name -->
+                  <h5 class="card-title">
+                    laboris quis nisi consequat pariatur enim
+                  </h5>
+                  <!-- Product-price -->
+                  <h6 class="card-subtitle">$80</h6>
+                  <!-- Product-description -->
+                  <p class="card-text">
+                    nostrud in labore cupidatat amet ea id sit ut ipsum amet
+                    pariatur deserunt est esse amet ea id sit ut ipsum amet
+                    pariatur deserunt est esse
+                  </p>
+                  <!-- Actions btn -->
+                  <div class="btn-group float-end">
+                    <a href="#" class="btn btn-outline-watch"
+                      ><i class="fas fa-heart me-2"></i>Wishlist</a
+                    >
+                    <a href="#" class="btn btn-outline-watch"
+                      ><i class="fas fa-plus me-2"></i>Cart</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="text-bg-watch shadow-sm py-5">
+      <div class="container">
+        <!-- Hot Links -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
+          <div class="col">
+            <div class="text-center">
+              <img
+                class="&-block w-50 mb-3"
+                src="../../public/imgs/Logo.png"
+                alt="Logo"
+              />
+            </div>
+            <p>
+              dolor ad voluptate sint dolor eiusmod deserunt qui duis laboris
+              nostrud magna anim laboris esse laboris sint duis ex adipisicing
+              adipisicing irure elit voluptate proident pariatur minim ea
+              adipisicing tempor
+            </p>
+          </div>
+          <div class="col">
+            <!-- Hot Links -->
+            <h3>Hot Links</h3>
+            <ul class="list-unstyled">
+              <li class="py-1">
+                <a class="text-decoration-none text-watch-sub" href="#">Home</a>
+              </li>
+              <li class="py-1">
+                <a class="text-decoration-none text-watch-sub" href="#"
+                  >About</a
+                >
+              </li>
+              <li class="py-1">
+                <a class="text-decoration-none text-watch-sub" href="#"
+                  >Womens</a
+                >
+              </li>
+              <li class="py-1">
+                <a class="text-decoration-none text-watch-sub" href="#">Mens</a>
+              </li>
+              <li class="py-1">
+                <a class="text-decoration-none text-watch-sub" href="#"
+                  >Childs</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Policies and Privacies</h3>
+            <ul class="list-unstyled">
+              <li class="py-1">
+                <a class="text-decoration-none text-watch-sub" href="#"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li class="py-1">
+                <a class="text-decoration-none text-watch-sub" href="#"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="py-1">
+                <a class="text-decoration-none text-watch-sub" href="#"
+                  >Help Center</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Social contact -->
+        <div class="text-center social py-5">
+          <a class="me-4" href="#"><i class="fab fa-facebook-f fs-3"></i></a>
+          <a class="me-4" href="#"><i class="fab fa-linkedin-in fs-3"></i></a>
+          <a class="me-4" href="#"><i class="fab fa-youtube fs-3"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g fs-3"></i></a>
+        </div>
+        <!-- Copyrights -->
+        <div class="text-center">
+          Developed by &copy; <strong>Websites<small>Genius</small></strong>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div
+      class="modal fade"
+      id="register"
+      tabindex="-1"
+      aria-labelledby="registerLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      dtat-bs-keyboard="false"
+    >
+      <div class="modal-dialog mt-5 pt-5">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="registerLabel">
+              Create WatGenius Account
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body position-relative">
+            <div class="modal-btn-icon py-3">
+              <button
+                class="d-block w-100 text-start btn facebook rounded-5 mb-3"
+              >
+                <i class="fab fa-facebook-f me-3 text-center"></i>
+                Facebook
+              </button>
+              <button class="d-block w-100 text-start btn google rounded-5">
+                <i class="fab fa-google me-3 text-center"></i>
+                Google
+              </button>
+            </div>
+
+            <div class="modal-divider py-3 position-relative">
+              <hr class="border-5 border-watch rounded-5" />
+              <div class="bg-watch icon position-absolute"></div>
+            </div>
+
+            <form action="#" class="form">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Example@gmail.com"
+                />
+                <label for="email">Email Address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Most be stronge password"
+                />
+                <label for="password">Password</label>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="privacy"
+                />
+                <label class="form-check-label" for="privacy">
+                  Accept <a href="#">terms</a> and <a href="#">policies</a> of
+                  using.
+                </label>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-outline-watch px-4">
+                  <i class="fas fa-plus me-2"></i>Create
+                </button>
+              </div>
+            </form>
+
+            <div class="modal-divider py-3 position-relative">
+              <hr class="border-5 border-watch rounded-5" />
+              <div class="bg-watch icon position-absolute"></div>
+            </div>
+
+            <div class="text-center py-3">
+              <span
+                >Aleardy have an account,
+                <a href="#" data-bs-target="#login" data-bs-toggle="modal"
+                  >Singin</a
+                >
+                instead</span
+              >
+            </div>
+
+            <img
+              class="position-absolute left-0 top-0 mt-5 d-block w-100 modal-bg-cover"
+              src="public/imgs/Logo.png"
+              alt="logo-bg-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="login"
+      tabindex="-1"
+      aria-labelledby="loginLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      dtat-bs-keyboard="false"
+    >
+      <div class="modal-dialog mt-5 pt-5">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginLabel">
+              Start WatGenius Session
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body position-relative">
+            <div class="text-center py-3">
+              <span
+                >Do not have an account,
+                <a href="#" data-bs-target="#register" data-bs-toggle="modal"
+                  >Singup</a
+                >
+                instead</span
+              >
+            </div>
+
+            <div class="modal-divider py-3 position-relative">
+              <hr class="border-5 border-watch rounded-5" />
+              <div class="bg-watch icon position-absolute"></div>
+            </div>
+
+            <div class="py-3 modal-btn-icon">
+              <button
+                class="d-block w-100 text-start btn facebook rounded-5 mb-3"
+              >
+                <i class="fab fa-facebook-f me-3 text-center"></i>
+                Facebook
+              </button>
+              <button class="d-block w-100 text-start btn google rounded-5">
+                <i class="fab fa-google me-3 text-center"></i>
+                Google
+              </button>
+            </div>
+
+            <div class="modal-divider py-3 position-relative">
+              <hr class="border-5 border-watch rounded-5" />
+              <div class="bg-watch icon position-absolute"></div>
+            </div>
+
+            <form action="#" class="form">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Example@gmail.com"
+                />
+                <label for="email">Email Address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Most be stronge password"
+                />
+                <label for="password">Password</label>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="privacy"
+                />
+                <label class="form-check-label" for="privacy">
+                  Remmeber me
+                </label>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-outline-watch px-4">
+                  <i class="fas fa-key me-2"></i>login
+                </button>
+              </div>
+            </form>
+
+            <img
+              class="position-absolute left-0 top-0 mt-5 d-block w-100 modal-bg-cover"
+              src="public/imgs/Logo.png"
+              alt="logo-bg-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="cart"
+      tabindex="-1"
+      aria-labelledby="cartLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      dtat-bs-keyboard="false"
+    >
+      <div class="modal-dialog mt-5 pt-5">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="cartLabel">Cart Items</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="table-responsive-sm">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">amount</th>
+                    <th scope="col">price</th>
+                    <th scope="col">action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col">1</th>
+                    <td>
+                      <img
+                        class="d-block w-100"
+                        src="public/imgs/watches/2.png"
+                        alt="item-image"
+                      />
+                    </td>
+                    <td>453 Leather Watch</td>
+                    <td>
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        value="5"
+                      />
+                    </td>
+                    <td>$1500</td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn btn-outline-danger" title="Remove">
+                          <i class="fas fa-times"></i>
+                        </button>
+                        <button
+                          class="btn btn-outline-success"
+                          title="Complete Payment"
+                        >
+                          <i class="fas fa-dollar"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col">2</th>
+                    <td>
+                      <img
+                        class="d-block w-100"
+                        src="public/imgs/watches/3.png"
+                        alt="item-image"
+                      />
+                    </td>
+                    <td>6453 Silver Watch</td>
+                    <td>
+                      <input
+                        type="number"
+                        min="1"
+                        class="form-control"
+                        value="2"
+                      />
+                    </td>
+                    <td>$1000</td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn btn-outline-danger" title="Remove">
+                          <i class="fas fa-times"></i>
+                        </button>
+                        <button
+                          class="btn btn-outline-success"
+                          title="Complete Payment"
+                        >
+                          <i class="fas fa-dollar"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="py-3">
+                    <td colspan="4">Total</td>
+                    <td class="text-end" colspan="2">$2500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-danger">
+                <i class="fas fa-times me-1"></i>
+                Remove All
+              </button>
+              <button type="button" class="btn btn-outline-success">
+                <i class="fas fa-dollar me-1"></i>
+                Pay All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="demo"
+      tabindex="-1"
+      aria-labelledby="cartLabel"
+      aria-hidden="true"
+      dtat-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered mt-5 pt-5">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h1 class="modal-title pt-5 w-100 text-center">Watch Name</h1>
+          </div>
+
+          <div class="modal-body">
+            <hr class="mx-5" />
+            <img
+              src="../../public/imgs/watches/2.png"
+              alt="item-image-demo"
+              class="d-block w-100"
+            />
+            <hr class="mx-5" />
+          </div>
+
+          <div class="modal-footer border-0 pb-5">
+            <button
+              type="button"
+              class="btn btn-outline-watch w-100 mx-5"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fas fa-eye-slash"></i>
+              Hide
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../public/js/jquery-3.4.1.min.js"></script>
+    <script src="../../public/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(function() {
+        let numOfThumb = $('.thumbnails').children().length,
+            mainMargin = '.5',
+            marginBetThumb = (numOfThumb -1) * mainMargin,
+            thumbWidth = (100 - marginBetThumb) / numOfThumb;
+
+        $('.thumbnails > img').css({
+          'width': `${thumbWidth}%`,
+          'margin-right': `${mainMargin}%`,
+        });
+        
+        $('.thumbnails > img').on('click', function() {
+          $(this).addClass('selected').siblings().removeClass('selected');
+          $('.master-img').hide().attr('src', $(this).attr('src')).fadeIn(300);
+        });
+      });
+    </script>
+  </body>
+</html>
