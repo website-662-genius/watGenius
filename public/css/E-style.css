@@ -92,7 +92,10 @@ body {
 .header-big, .header-small {
   background: linear-gradient(to right bottom, #153b5f90 0%, #153b5f20 100%), url("../../../public/imgs/store-bg.png");
   background-size: cover;
-  min-height: 300px;
+}
+
+.navbar .navbar-collapse {
+  z-index: 9999;
 }
 
 @media (max-width: 991.98px) {
