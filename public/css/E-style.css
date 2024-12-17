@@ -10,6 +10,10 @@
   font-weight: bold;
 }
 
+.bg-snow {
+  background-color: snow;
+}
+
 .bg-watch {
   background-color: #153b5f;
 }
@@ -63,6 +67,10 @@
   left: -1px;
 }
 
+.bottom {
+  bottom: -1px;
+}
+
 .logo {
   width: 150px;
 }
@@ -83,12 +91,6 @@ body {
   height: 300px !important;
 }
 
-@media (min-width: 768px) {
-  .header-small {
-    height: 250px !important;
-  }
-}
-
 .header-big, .header-small {
   background: linear-gradient(to right bottom, #153b5f90 0%, #153b5f20 100%), url("../../../public/imgs/store-bg.png");
   background-size: cover;
@@ -104,9 +106,21 @@ body {
   }
   .navbar .navbar-collapse .nav-link {
     color: #ffcc00;
+    padding: .75rem .5rem;
   }
   .navbar .navbar-collapse .nav-link.active {
+    color: snow;
     font-weight: 900;
+  }
+  .navbar .navbar-collapse .nav-link.active::before {
+    content: "🕒 ";
+    margin-right: .5rem;
+  }
+  .navbar .navbar-collapse .nav-link:hover {
+    animation: link-hover-in .3s forwards ease-in-out;
+  }
+  .navbar .navbar-collapse .nav-link:not(:hover) {
+    animation: link-hover-out .3s forwards ease-in-out;
   }
 }
 
@@ -119,11 +133,41 @@ body {
     border-bottom-left-radius: 0;
   }
   to {
-    background: #153b5fa9;
+    background: #153b5fee;
     padding: 5px 10px;
     border-top: 1px solid #ffffffe9;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+  }
+}
+
+@keyframes link-hover-in {
+  from {
+    background: transparent;
+    color: #ffcc00;
+    border-radius: 0;
+    font-weight: normal;
+  }
+  to {
+    background: #ffcc00;
+    color: #153b5f;
+    border-radius: .5rem;
+    font-weight: 600;
+  }
+}
+
+@keyframes link-hover-out {
+  from {
+    background: #ffcc00;
+    color: #153b5f;
+    border-radius: .5rem;
+    font-weight: 600;
+  }
+  to {
+    background: transparent;
+    color: #ffcc00;
+    border-radius: 0;
+    font-weight: normal;
   }
 }
 
@@ -248,7 +292,7 @@ body {
 }
 
 .items .card:hover .icons {
-  animation: card-rtl-in 0.5s forwards 0.1s ease-in-out;
+  animation: card-rtl-in 0.5s forwards 0.3s ease-in-out;
 }
 
 .items .card:not(:hover) img {
@@ -256,11 +300,15 @@ body {
 }
 
 .items .card:not(:hover) .left-watch-box {
-  animation: card-ltr-out 0.5s forwards ease-in-out;
+  animation: card-ltr-out 0.5s forwards 0.2s ease-in-out;
 }
 
 .items .card:not(:hover) .icons {
-  animation: card-rtl-out 0.5s forwards ease-in-out;
+  animation: card-rtl-out 0.5s forwards 0.3s ease-in-out;
+}
+
+.img-expand-in {
+  animation: img-expand-in 0.5s forwards ease-in-out;
 }
 
 @keyframes img-expand-in {
@@ -339,7 +387,33 @@ body {
 
 .thumbnails img:not(.selected) {
   filter: grayscale(100);
-  opacity: .5;
+  opacity: 0.5;
+}
+
+.blog .upper .title {
+  z-index: 1;
+  left: 5px;
+}
+
+.blog .upper .title::before, .blog .upper .title::after {
+  position: absolute;
+  display: block;
+  z-index: -1;
+  content: " ";
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  top: 8px;
+}
+
+.blog .upper .title::before {
+  right: -10px;
+  background-color: black;
+}
+
+.blog .upper .title::after {
+  right: -15px;
+  background: white;
 }
 
 footer .social a i {
@@ -353,11 +427,11 @@ footer .social a i {
 }
 
 footer .social a i:hover {
-  animation: footer-social-colors-in .5s forwards ease-in-out;
+  animation: footer-social-colors-in 0.5s forwards ease-in-out;
 }
 
 footer .social a i:not(:hover) {
-  animation: footer-social-colors-out .5s forwards ease-in-out;
+  animation: footer-social-colors-out 0.5s forwards ease-in-out;
 }
 
 @keyframes footer-social-colors-in {
@@ -400,43 +474,43 @@ footer .social a i:not(:hover) {
 }
 
 .modal .modal-btn-icon .facebook {
-  border-color: #4267B2;
-  color: #4267B2;
+  border-color: #4267b2;
+  color: #4267b2;
 }
 
 .modal .modal-btn-icon .facebook > i {
   color: white;
-  background-color: #4267B2;
+  background-color: #4267b2;
 }
 
 .modal .modal-btn-icon .facebook:hover {
   color: white;
-  background-color: #4267B2;
+  background-color: #4267b2;
 }
 
 .modal .modal-btn-icon .facebook:hover > i {
   background-color: white;
-  color: #4267B2;
+  color: #4267b2;
 }
 
 .modal .modal-btn-icon .google {
-  border-color: #DB4437;
-  color: #DB4437;
+  border-color: #db4437;
+  color: #db4437;
 }
 
 .modal .modal-btn-icon .google > i {
   color: white;
-  background-color: #DB4437;
+  background-color: #db4437;
 }
 
 .modal .modal-btn-icon .google:hover {
   color: white;
-  background-color: #DB4437;
+  background-color: #db4437;
 }
 
 .modal .modal-btn-icon .google:hover > i {
   background-color: white;
-  color: #DB4437;
+  color: #db4437;
 }
 
 .modal .modal-btn-icon i {
@@ -454,4 +528,8 @@ footer .social a i:not(:hover) {
   left: 50%;
   margin-left: -15px;
   box-shadow: 0 0 1px 5px white;
+}
+
+.modal .modal-dialog {
+  height: 100%;
 }
